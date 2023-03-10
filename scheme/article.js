@@ -1,6 +1,7 @@
+// 导入定义验证规则的模块
 const joi = require('@hapi/joi')
 
-// 分别定义 标题、分类Id、内容、发布状态的校验规则
+// 定义 标题、分类Id、内容、发布状态 的验证规则
 const title = joi.string().required()
 const cate_id = joi.number().integer().min(1).required()
 const content = joi.string().required().allow('')
